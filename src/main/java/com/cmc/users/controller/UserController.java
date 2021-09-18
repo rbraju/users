@@ -1,5 +1,6 @@
 package com.cmc.users.controller;
 
+import com.cmc.users.controller.model.SampleResponse;
 import com.cmc.users.controller.model.Signin;
 import com.cmc.users.controller.model.SigninResponse;
 import org.springframework.http.ResponseEntity;
@@ -12,8 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 
     @GetMapping("/")
-    public ResponseEntity<String> test() {
-        return ResponseEntity.ok("Success");
+    public ResponseEntity<SampleResponse> test() {
+        return ResponseEntity.ok(new SampleResponse("success", "The application is running successfully."));
     }
 
     @GetMapping("/hello")
